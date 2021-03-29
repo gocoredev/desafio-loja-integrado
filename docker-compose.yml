@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  cart-api:
+    build: .
+    command: npm start
+    volumes:
+      - .:/usr/app
+    restart: always
+    links:
+      - json-server
+    ports:
+      - "3333:3333"
+    
+    
